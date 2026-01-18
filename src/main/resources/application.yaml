@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: series-quotes
+  datasource:
+    url: jdbc:postgresql://localhost:5432/series_quotes
+    username: YOUR_DB_USERNAME
+    password: YOUR_DB_PASSWORD
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        highlight_sql: true
+
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+
+springdoc:
+  packages-to-scan: br.com.seriesquotes
